@@ -1,0 +1,27 @@
+using System;
+class collage
+{
+    static void Main()
+    {
+        Console.WriteLine("求最大公因數程式\n請輸入數字1:");
+        int x = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine("數字2:");
+        int y = Convert.ToInt32(Console.ReadLine());
+        int k = 0;
+        int hold = 0;
+        if (y > x)
+        {
+            hold = x;
+            x = y;
+            y = hold;
+            hold = 0;
+        }
+        for(; x % y != 0;)
+        {
+            k = x % y;
+            x = y;
+            y = k;
+        }
+        Console.WriteLine("最大公因數:" + y);
+    }
+}
